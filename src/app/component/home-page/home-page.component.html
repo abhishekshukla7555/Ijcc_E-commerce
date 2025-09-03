@@ -1,0 +1,20 @@
+<div class="slider">
+  <!-- Loop through slides -->
+  <div
+    class="slide"
+    *ngFor="let slide of slides; let i = index"
+    [class.active]="i === currentIndex"
+    [style.backgroundImage]="'url(' + slide.image + ')'"
+  >
+    <div class="content">
+      <h2>{{ slide.title }}</h2>
+      <p>{{ slide.subtitle }}</p>
+      <h3>{{ slide.description }}</h3>
+      <p class="price">{{ slide.price }}</p>
+    </div>
+  </div>
+
+  <!-- Navigation -->
+  <button class="prev" (click)="prevSlide()">&#10094;</button>
+  <button class="next" (click)="nextSlide()">&#10095;</button>
+</div>

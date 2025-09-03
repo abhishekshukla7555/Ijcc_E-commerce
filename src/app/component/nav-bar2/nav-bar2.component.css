@@ -1,0 +1,65 @@
+/* Navbar container */
+.categories-navbar {
+  display: flex;
+  align-items: center;
+  background-color: #232f3e;
+  padding: 8px 15px;
+  color: white;
+  flex-wrap: wrap;
+}
+
+/* Left menu button (hidden by default on desktop) */
+.menu-toggle {
+  margin-right: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  display: none; /* hide on desktop */
+}
+.menu-toggle span {
+  background: #131921;
+  padding: 6px 12px;
+  border-radius: 4px;
+  display: inline-block;
+}
+
+/* Categories list */
+.categories-list {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+}
+.categories-list li {
+  white-space: nowrap;
+}
+.categories-list a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  padding: 6px 8px;
+  border-radius: 3px;
+  transition: background 0.3s;
+}
+.categories-list a:hover {
+  background: #37475a;
+}
+
+/* Responsive: collapse into hamburger */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block; /* show All button */
+  }
+  .categories-list {
+    display: none; /* hide menu by default */
+    flex-direction: column;
+    width: 100%;
+    background: #232f3e;
+    margin-top: 10px;
+    padding: 10px 0;
+  }
+  .categories-list.active {
+    display: flex; /* show when toggled */
+  }
+}

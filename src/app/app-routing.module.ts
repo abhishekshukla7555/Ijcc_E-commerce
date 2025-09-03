@@ -1,7 +1,17 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { HomePageComponent } from './component/home-page/home-page.component';
+import { LoginPageComponent } from './component/login-page/login-page.component';
+import { ReturnOrdersPageComponent } from './component/return-orders-page/return-orders-page.component';
+import { CardPagesComponent } from './component/card-pages/card-pages.component';
 
-const routes: Routes = [];
+const routes: Routes = [
+   { path: '', component: HomePageComponent },       // Default Home
+  { path: 'login', component: LoginPageComponent },
+  { path: 'returns', component: ReturnOrdersPageComponent },
+  { path: 'cart', component: CardPagesComponent },
+  { path: '**', redirectTo: '' } // Wildcard -> Home
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
