@@ -21,11 +21,195 @@ export const SLIDES = [
     description: 'OnePlus 12R 5G',
     price: 'From ₹34,999'
   },
+ 
+];
+
+
+
+
+
+
+
+
+
+
+
+// src/app/data.ts
+export interface Product {
+  id: number;
+  name: string;
+  price: number;
+  oldPrice: number;
+  image: string;
+  brand: string;
+}
+
+export const PRODUCTS: Product[] = [
   {
-    image: 'assets/slider4.jpg',
-    title: 'VIVO',
-    subtitle: 'AI Powered Camera',
-    description: 'Vivo X100 Series',
-    price: 'From ₹29,999'
+    id: 1,
+    name: "Comfy Casual Shoes",
+    price: 899,
+    oldPrice: 2799,
+    image: "assets/images/home2.jpeg",
+    brand: "Nike"
+  },
+  {
+    id: 2,
+    name: "Deodorants",
+    price: 199,
+    oldPrice: 549,
+    image: "assets/images/home2.jpeg",
+    brand: "Fogg"
+  },
+  {
+    id: 3,
+    name: "Breezy Flip Flops",
+    price: 499,
+    oldPrice: 1399,
+    image: "assets/images/home2.jpeg",
+    brand: "Adidas"
+  },
+  {
+    id: 4,
+    name: "Sharp Formal Shoes",
+    price: 899,
+    oldPrice: 2799,
+    image: "assets/images/home1.jpeg",
+    brand: "Bata"
+  },
+  {
+    id: 5,
+    name: "Trendy Jeans",
+    price: 649,
+    oldPrice: 1799,
+    image: "assets/images/home1.jpeg",
+    brand: "Levis"
+  },
+  {
+    id: 6,
+    name: "Enticing Perfumes",
+    price: 449,
+    oldPrice: 1249,
+    image: "assets/images/home1.jpeg",
+    brand: "Wild Stone"
   }
+];
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+export interface MenProduct {
+  id: number;
+  title: string;
+  image: string;
+  price: number;
+  oldPrice?: number;
+  discount?: string;
+  rating: number;
+  reviews: number;
+  delivery: string;
+}
+
+export const MEN_PRODUCTS: MenProduct[] = [
+  {
+    id: 1,
+    title: 'Men T-Shirt',
+    image: 'https://m.media-amazon.com/images/I/41fCYhGblfL._MCnd_AC_.jpg',
+    price: 599,
+    oldPrice: 999,
+    discount: '40% off',
+    rating: 4.3,
+    reviews: 120,
+    delivery: 'Free delivery by Tomorrow'
+  },
+  {
+    id: 2,
+    title: 'Men T-Shirt',
+    image: 'https://m.media-amazon.com/images/I/41fCYhGblfL._MCnd_AC_.jpg',
+    price: 599,
+    oldPrice: 999,
+    discount: '40% off',
+    rating: 4.3,
+    reviews: 120,
+    delivery: 'Free delivery by Tomorrow'
+  },
+  {
+    id: 3,
+    title: 'Men T-Shirt',
+    image: 'https://m.media-amazon.com/images/I/41fCYhGblfL._MCnd_AC_.jpg',
+    price: 599,
+    oldPrice: 999,
+    discount: '40% off',
+    rating: 4.3,
+    reviews: 120,
+    delivery: 'Free delivery by Tomorrow'
+  },
+   {
+    id: 4,
+    title: 'Men T-Shirt',
+    image: 'https://m.media-amazon.com/images/I/41fCYhGblfL._MCnd_AC_.jpg',
+    price: 599,
+    oldPrice: 999,
+    discount: '40% off',
+    rating: 4.3,
+    reviews: 120,
+    delivery: 'Free delivery by Tomorrow'
+  },
+  {
+    id: 5,
+    title: 'Men T-Shirt',
+    image: 'https://m.media-amazon.com/images/I/41fCYhGblfL._MCnd_AC_.jpg',
+    price: 599,
+    oldPrice: 999,
+    discount: '40% off',
+    rating: 2.3,
+    reviews: 120,
+    delivery: 'Free delivery by Tomorrow'
+  },
+   {
+    id: 6,
+    title: 'Men T-Shirt',
+    image: 'https://m.media-amazon.com/images/I/41fCYhGblfL._MCnd_AC_.jpg',
+    price: 599,
+    oldPrice: 999,
+    discount: '40% off',
+    rating: 2.3,
+    reviews: 120,
+    delivery: 'Free delivery by Tomorrow'
+  },
+  // ... more products
 ];

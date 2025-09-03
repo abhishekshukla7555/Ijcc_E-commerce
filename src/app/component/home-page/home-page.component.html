@@ -1,7 +1,8 @@
-<div class="slider">
+<!-- Banner Slider -->
+<div class="banner-slider">
   <!-- Loop through slides -->
   <div
-    class="slide"
+    class="banner-slide"
     *ngFor="let slide of slides; let i = index"
     [class.active]="i === currentIndex"
     [style.backgroundImage]="'url(' + slide.image + ')'"
@@ -18,3 +19,31 @@
   <button class="prev" (click)="prevSlide()">&#10094;</button>
   <button class="next" (click)="nextSlide()">&#10095;</button>
 </div>
+
+
+<!-- Product Carousel -->
+<div class="product-slider-container">
+  <div class="product-slider-track">
+    <div class="product-slide" *ngFor="let product of infiniteProducts">
+      <img [src]="product.image" [alt]="product.name" />
+      <div class="product-details">
+        <h4>{{ product.brand }}</h4>
+        <p class="name">{{ product.name }}</p>
+        <!-- <p class="price">
+          <span class="old">₹{{ product.oldPrice }}</span>
+          <span class="new">₹{{ product.price }}</span>
+        </p> -->
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<app-product></app-product>
+
+
+
+
+<h1> welcome to abhishek</h1>
+<app-footer></app-footer>

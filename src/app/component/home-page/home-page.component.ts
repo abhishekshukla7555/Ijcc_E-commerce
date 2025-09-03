@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { SLIDES } from '../../data';
+import { Product, PRODUCTS, SLIDES } from '../../data';
 
 @Component({
   selector: 'app-home-page',
@@ -8,19 +8,21 @@ import { SLIDES } from '../../data';
   styleUrl: './home-page.component.css'
 })
 export class HomePageComponent {
- slides = SLIDES;
+
+   slides = SLIDES;
   currentIndex = 0;
   autoSlideInterval: any;
 
+  products: Product[] = PRODUCTS;
+  infiniteProducts = [...PRODUCTS, ...PRODUCTS]; // for infinite loop
+
   ngOnInit() {
-    // Auto-slide every 5 seconds
     this.autoSlideInterval = setInterval(() => {
       this.nextSlide();
     }, 5000);
   }
 
   ngOnDestroy() {
-    // clear interval on destroy
     if (this.autoSlideInterval) {
       clearInterval(this.autoSlideInterval);
     }
