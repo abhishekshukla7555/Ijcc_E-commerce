@@ -1,7 +1,7 @@
 // src/app/data.ts
 export const SLIDES = [
   {
-    image: 'assets/images/home1.jpeg',
+    image: 'assets/images/red_chilli.png',
     title: 'SAMSUNG',
     subtitle: 'No. 1 selling smartphone',
     description: 'Galaxy A35 5G',
