@@ -50,7 +50,7 @@ export const PRODUCTS: Product[] = [
     name: "Comfy Casual Shoes",
     price: 899,
     oldPrice: 2799,
-    image: "assets/images/home2.jpeg",
+    image: "assets/images/KimchiJar.png ",
     brand: "Nike"
   },
   {
@@ -58,7 +58,7 @@ export const PRODUCTS: Product[] = [
     name: "Deodorants",
     price: 199,
     oldPrice: 549,
-    image: "assets/images/home2.jpeg",
+    image: "assets/images/Kimchijar3.png",
     brand: "Fogg"
   },
   {
@@ -66,7 +66,7 @@ export const PRODUCTS: Product[] = [
     name: "Breezy Flip Flops",
     price: 499,
     oldPrice: 1399,
-    image: "assets/images/home2.jpeg",
+    image: "assets/images/Kimchijar2.png",
     brand: "Adidas"
   },
   {
@@ -74,7 +74,7 @@ export const PRODUCTS: Product[] = [
     name: "Sharp Formal Shoes",
     price: 899,
     oldPrice: 2799,
-    image: "assets/images/home1.jpeg",
+    image: "assets/images/kimchibowl.png",
     brand: "Bata"
   },
   {
@@ -90,7 +90,7 @@ export const PRODUCTS: Product[] = [
     name: "Enticing Perfumes",
     price: 449,
     oldPrice: 1249,
-    image: "assets/images/home1.jpeg",
+    image: "assets/images/Kimchijar2.png",
     brand: "Wild Stone"
   }
 ];
