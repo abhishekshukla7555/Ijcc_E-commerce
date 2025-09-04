@@ -1,29 +1,13 @@
-
-<main class="product-grid">
-    <!-- <div class="container"> -->
-  <div class="product-card" *ngFor="let product of filteredProducts">
-    <img [src]="product.image" alt="{{ product.title }}" />
-
-    <h4 class="product-title">{{ product.title }}</h4>
-
-    <!-- Rating -->
-    <p class="rating">
-      ⭐ {{ product.rating }} <span class="reviews">({{ product.reviews }})</span>
-    </p>
-
-    <!-- Price -->
-    <p class="price">
-      <span class="current-price">₹{{ product.price }}</span>
-      <span *ngIf="product.oldPrice" class="old-price">₹{{ product.oldPrice }}</span>
-      <span *ngIf="product.discount" class="discount">{{ product.discount }}</span>
-    </p>
-
-    <!-- Delivery -->
-    <p class="delivery">{{ product.delivery }}</p>
-
-    <!-- Button -->
-    <button class="buy-btn">Buying options</button>
+<div class="product-grid">
+  <div class="product-card" *ngFor="let product of products">
+    <div class="product-image">
+      <img [src]="product.imgFront" [alt]="product.title" class="img-front">
+      <img [src]="product.imgBack" [alt]="product.title" class="img-back">
+    </div>
+    <div class="product-info">
+      <h3>{{ product.title }}</h3>
+      <p>{{ product.price }}</p>
+      <button (click)="viewDetails(product.id)">View Details</button>
+    </div>
   </div>
-  <!-- </div> -->
-</main>
-
+</div>

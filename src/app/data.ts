@@ -130,86 +130,34 @@ export const PRODUCTS: Product[] = [
 
 
 
-
-
-export interface MenProduct {
-  id: number;
-  title: string;
-  image: string;
-  price: number;
-  oldPrice?: number;
-  discount?: string;
-  rating: number;
-  reviews: number;
-  delivery: string;
-}
-
-export const MEN_PRODUCTS: MenProduct[] = [
+// src/app/data.ts
+export const PRODUCT_CARDS = [
   {
     id: 1,
-    title: 'Men T-Shirt',
-    image: 'https://m.media-amazon.com/images/I/41fCYhGblfL._MCnd_AC_.jpg',
-    price: 599,
-    oldPrice: 999,
-    discount: '40% off',
-    rating: 4.3,
-    reviews: 120,
-    delivery: 'Free delivery by Tomorrow'
+    title: 'Eco Large Jute Custom Bag',
+    price: '₹250.00',
+    imgFront: 'assets/images/home1.jpeg',
+    imgBack: 'assets/images/home2.jpeg'
   },
   {
     id: 2,
-    title: 'Men T-Shirt',
-    image: 'https://m.media-amazon.com/images/I/41fCYhGblfL._MCnd_AC_.jpg',
-    price: 599,
-    oldPrice: 999,
-    discount: '40% off',
-    rating: 4.3,
-    reviews: 120,
-    delivery: 'Free delivery by Tomorrow'
+    title: 'Charcoal Face Pack',
+    price: '₹199.00',
+    imgFront: 'assets/images/home1.jpeg',
+    imgBack: 'assets/images/home2.jpeg'
   },
   {
     id: 3,
-    title: 'Men T-Shirt',
-    image: 'https://m.media-amazon.com/images/I/41fCYhGblfL._MCnd_AC_.jpg',
-    price: 599,
-    oldPrice: 999,
-    discount: '40% off',
-    rating: 4.3,
-    reviews: 120,
-    delivery: 'Free delivery by Tomorrow'
-  },
-   {
-    id: 4,
-    title: 'Men T-Shirt',
-    image: 'https://m.media-amazon.com/images/I/41fCYhGblfL._MCnd_AC_.jpg',
-    price: 599,
-    oldPrice: 999,
-    discount: '40% off',
-    rating: 4.3,
-    reviews: 120,
-    delivery: 'Free delivery by Tomorrow'
+    title: 'Fewture Cotton Bag',
+    price: '₹150.00',
+    imgFront: 'assets/images/home1.jpeg',
+    imgBack: 'assets/images/home2.jpeg'
   },
   {
-    id: 5,
-    title: 'Men T-Shirt',
-    image: 'https://m.media-amazon.com/images/I/41fCYhGblfL._MCnd_AC_.jpg',
-    price: 599,
-    oldPrice: 999,
-    discount: '40% off',
-    rating: 2.3,
-    reviews: 120,
-    delivery: 'Free delivery by Tomorrow'
-  },
-   {
-    id: 6,
-    title: 'Men T-Shirt',
-    image: 'https://m.media-amazon.com/images/I/41fCYhGblfL._MCnd_AC_.jpg',
-    price: 599,
-    oldPrice: 999,
-    discount: '40% off',
-    rating: 2.3,
-    reviews: 120,
-    delivery: 'Free delivery by Tomorrow'
-  },
-  // ... more products
+    id: 4,
+    title: 'Stylus File Folder',
+    price: '₹120.00',
+   imgFront: 'assets/images/home1.jpeg',
+    imgBack: 'assets/images/home2.jpeg'
+  }
 ];

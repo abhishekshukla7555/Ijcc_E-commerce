@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { MEN_PRODUCTS, MenProduct } from '../../data';
+import {  PRODUCT_CARDS } from '../../data';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-product',
@@ -8,6 +9,11 @@ import { MEN_PRODUCTS, MenProduct } from '../../data';
   styleUrl: './product.component.css'
 })
 export class ProductComponent {
- products: MenProduct[] = MEN_PRODUCTS; 
-   filteredProducts: MenProduct[] = this.products;
+  products = PRODUCT_CARDS;
+
+  constructor(private router: Router) {}
+
+  viewDetails(productId: number) {
+    this.router.navigate(['/products', productId]);
+  }
 }

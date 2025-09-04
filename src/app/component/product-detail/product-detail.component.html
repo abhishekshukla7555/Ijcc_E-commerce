@@ -1,0 +1,18 @@
+<div class="product-detail" *ngIf="product">
+  <h2>{{ product.title }}</h2>
+
+  <!-- Images -->
+  <div class="detail-images">
+    <img [src]="product.imgFront" alt="{{ product.title }}">
+    <img [src]="product.imgBack" alt="{{ product.title }}">
+  </div>
+
+  <!-- Info -->
+  <p><strong>Price:</strong> {{ product.price }}</p>
+  <p><strong>Brand:</strong> {{ product.brand }}</p>
+  <p><strong>Category:</strong> {{ product.category }}</p>
+  <p><strong>Description:</strong> {{ product.description }}</p>
+
+  <!-- Order Button -->
+  <button class="order-btn">Order Now</button>
+</div>
