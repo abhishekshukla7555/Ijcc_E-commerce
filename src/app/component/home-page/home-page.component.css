@@ -4,7 +4,7 @@
 .banner-slider {
   position: relative;
   width: 100%;
-  height: 400px;
+  height: 500px;
   overflow: hidden;
 }
 
@@ -114,7 +114,6 @@
   gap: 16px;
   animation: scroll-left 25s linear infinite;
 }
-
 .product-slide {
   flex: 0 0 auto;
   width: 200px;
@@ -123,14 +122,20 @@
   text-align: center;
   background: #fff;
   padding: 10px;
+  overflow: hidden;           /* Prevent content overflow */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .product-slide img {
   width: 100%;
-  height: 150px;
-  object-fit: cover;
-  border-radius: 20px;
+  max-height: 150px;          /* Constrain height */
+  object-fit: contain;        /* Keep aspect ratio inside card */
+  border-radius: 12px;
+  display: block;
 }
+
 
 .product-details {
   margin-top: 8px;
