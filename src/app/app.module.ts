@@ -11,8 +11,10 @@ import { CardPagesComponent } from './component/card-pages/card-pages.component'
 import { HomePageComponent } from './component/home-page/home-page.component';
 import { FooterComponent } from './component/footer/footer.component';
 import { ProductComponent } from './component/product/product.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ProductDetailComponent } from './component/product-detail/product-detail.component';
+import { OffSectionComponent } from './off-section/off-section.component';
+import { ReviewSectionComponent } from './component/review-section/review-section.component';
 
 @NgModule({
   declarations: [
@@ -25,11 +27,14 @@ import { ProductDetailComponent } from './component/product-detail/product-detai
     HomePageComponent,
     FooterComponent,
     ProductComponent,
-    ProductDetailComponent
+    ProductDetailComponent,
+    OffSectionComponent,
+    ReviewSectionComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
     ReactiveFormsModule
   ],
   providers: [],
