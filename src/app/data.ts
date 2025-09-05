@@ -136,28 +136,28 @@ export const PRODUCT_CARDS = [
     id: 1,
     title: 'Eco Large Jute Custom Bag',
     price: '₹250.00',
-    imgFront: 'assets/images/home1.jpeg',
-    imgBack: 'assets/images/home2.jpeg'
+    imgFront: 'assets/images/Kimchijar3.png',
+    imgBack: 'assets/images/kimchibowl.png'
   },
   {
     id: 2,
     title: 'Charcoal Face Pack',
     price: '₹199.00',
-    imgFront: 'assets/images/home1.jpeg',
-    imgBack: 'assets/images/home2.jpeg'
+    imgFront: 'assets/images/Kimchijar3.png',
+    imgBack: 'assets/images/kimchibowl.png'
   },
   {
     id: 3,
     title: 'Fewture Cotton Bag',
     price: '₹150.00',
-    imgFront: 'assets/images/home1.jpeg',
-    imgBack: 'assets/images/home2.jpeg'
+      imgFront: 'assets/images/Kimchijar3.png',
+    imgBack: 'assets/images/kimchibowl.png'
   },
   {
     id: 4,
     title: 'Stylus File Folder',
     price: '₹120.00',
-   imgFront: 'assets/images/home1.jpeg',
-    imgBack: 'assets/images/home2.jpeg'
+     imgFront: 'assets/images/Kimchijar3.png',
+    imgBack: 'assets/images/kimchibowl.png'
   }
 ];
