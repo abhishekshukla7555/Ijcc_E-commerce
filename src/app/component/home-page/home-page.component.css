@@ -80,7 +80,7 @@
 /* Responsive Banner */
 @media (max-width: 768px) {
   .banner-slider {
-    height: 220px;
+    height: 500px;
   }
 
   .content {
@@ -97,6 +97,14 @@
   .price {
     font-size: 0.9rem;
   }
+}
+
+
+.prod-heading{
+  text-align: center;
+  margin: 20px 0;
+  color: red;
+
 }
 
 /* -------------------- */

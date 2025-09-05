@@ -1,4 +1,4 @@
-/* Grid Layout */
+/* Default Grid Layout */
 .product-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -12,6 +12,7 @@
   border-radius: 10px;
   overflow: hidden;
   transition: transform 0.3s ease;
+  background: none;
 }
 
 .product-card:hover {
@@ -23,6 +24,9 @@
   position: relative;
   width: 100%;
   aspect-ratio: 1/1;
+  /* margin-left: 67px; */
+  /* margin-right: 70px; */
+  height: 140px;
   overflow: hidden;
 }
 
@@ -32,7 +36,6 @@
   object-fit: contain;
   position: absolute;
   top: 0;
-
   left: 0;
   transition: opacity 0.4s ease;
   border-radius: 20px; 
@@ -40,7 +43,6 @@
 
 .product-image .img-front {
   opacity: 1;
-   
 }
 
 .product-image .img-back {
@@ -58,6 +60,9 @@
 /* Product Info */
 .product-info {
   margin-top: 10px;
+  padding: 10px;
+  margin-left: 60px;
+  text-align: left;
 }
 
 .product-info h3 {
@@ -70,28 +75,78 @@
   font-size: 14px;
   color: #555;
 }
+
 .product-info button {
   margin-top: 10px;
-  padding: 10px 20px;       /* Increased size */
-  font-size: 16px;          /* Bigger text */
-  font-weight: 600;         /* Bold text */
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: 600;
   border: none;
   background: #bc002d;
   color: #fff;
-  border-radius: 8px;       /* Slightly bigger rounding */
+  border-radius: 8px;
   cursor: pointer;
   transition: background 0.3s ease, transform 0.2s ease;
 }
 
 .product-info button:hover {
   background: #141414;
-  transform: scale(1.05);   /* Subtle zoom on hover */
+  transform: scale(1.05);
 }
 
-
-/* Responsive */
+/* Responsive Row Layout *//* Responsive Row Layout */
 @media (max-width: 768px) {
-  .product-grid {
-    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  .product-card {
+    display: flex;
+    align-items: center;
+    text-align: left;
+    padding: 10px;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    background: none;
+  }
+
+  /* Image section */
+  .product-image {
+    flex: 1;
+    max-width: 150px;
+    height: 150px;       /* ✅ Fix: give container height */
+    position: relative;
+    overflow: hidden;
+  }
+
+  .product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    position: absolute;  /* both images stack */
+    top: 0;
+    left: 0;
+    border-radius: 10px;
+    transition: opacity 0.4s ease;
+  }
+
+  .product-image .img-front {
+    opacity: 1;
+  }
+
+  .product-image .img-back {
+    opacity: 0;
+  }
+
+  /* Hover effect */
+  .product-card:hover .img-front {
+    opacity: 0;
+  }
+
+  .product-card:hover .img-back {
+    opacity: 1;
+  }
+
+  /* Info section */
+  .product-info {
+    flex: 2;
+    margin-left: 15px;
+    margin-top: 0;
   }
 }
