@@ -1,18 +1,68 @@
-<div class="product-detail" *ngIf="product">
-  <h2>{{ product.title }}</h2>
+<div class="container" *ngIf="product">
+  <div class="product-page">
+    <!-- Gallery -->
+    <div class="product-gallery">
+      <div class="main-image">
+        <img [src]="selectedImage" alt="Product Image">
+      </div>
+      <div class="thumbnail-list">
+        <img *ngFor="let thumb of product.images"
+             [src]="thumb"
+             alt="thumbnail"
+             (click)="changeImage(thumb)"
+             [class.active]="selectedImage === thumb">
+      </div>
+    </div>
 
-  <!-- Images -->
-  <div class="detail-images">
-    <img [src]="product.imgFront" alt="{{ product.title }}">
-    <img [src]="product.imgBack" alt="{{ product.title }}">
+    <!-- Details -->
+    <div class="product-details">
+      <h2 class="brand">{{ product.brand }}</h2>
+      <h1 class="title">{{ product.title }}</h1>
+      <div class="rating">
+        {{ '⭐'.repeat(product.rating) }}☆ 
+        <span>({{ product.reviews }} ratings)</span>
+      </div>
+
+      <div class="price">
+        <span class="current">₹{{ product.price.current }}</span>
+        <span class="old">₹{{ product.price.old }}</span>
+        <span class="discount">{{ product.price.discount }}</span>
+      </div>
+
+      <div class="color-options">
+        <h3>Available Colors:</h3>
+        <div class="colors">
+          <img *ngFor="let c of product.colors" [src]="c.image" [alt]="c.name">
+        </div>
+      </div>
+
+      <div class="size-options">
+        <h3>Select Size:</h3>
+        <button *ngFor="let s of product.sizes">{{ s }}</button>
+      </div>
+
+      <div class="delivery">
+        <h3>Delivery</h3>
+        <p>Get it by <strong>{{ product.delivery.date }}</strong></p>
+        <p class="delivery-location">
+          Delivering to: <span>{{ product.delivery.location }}</span>
+        </p>
+      </div>
+
+      <div class="actions">
+        <button class="btn add-to-cart">Add to Cart</button>
+        <button class="btn buy-now">Buy Now</button>
+      </div>
+
+      <div class="details">
+        <h3>Product Details</h3>
+        <p>
+          Material: {{ product.details.material }}<br>
+          Sleeve: {{ product.details.sleeve }}<br>
+          Fit Type: {{ product.details.fit }}<br>
+          Collar: {{ product.details.collar }}
+        </p>
+      </div>
+    </div>
   </div>
-
-  <!-- Info -->
-  <p><strong>Price:</strong> {{ product.price }}</p>
-  <p><strong>Brand:</strong> {{ product.brand }}</p>
-  <p><strong>Category:</strong> {{ product.category }}</p>
-  <p><strong>Description:</strong> {{ product.description }}</p>
-
-  <!-- Order Button -->
-  <button class="order-btn">Order Now</button>
 </div>
