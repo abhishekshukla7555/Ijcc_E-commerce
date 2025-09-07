@@ -9,7 +9,7 @@ import { LoginPageComponent } from './component/login-page/login-page.component'
 import { ReturnOrdersPageComponent } from './component/return-orders-page/return-orders-page.component';
 import { CardPagesComponent } from './component/card-pages/card-pages.component';
 import { HomePageComponent } from './component/home-page/home-page.component';
-import { FooterComponent } from './component/footer/footer.component';
+import { FooterComponent } from './component/footer/footer.component'; // import karo
 import { ProductComponent } from './component/product/product.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ProductDetailComponent } from './component/product-detail/product-detail.component';
@@ -25,7 +25,6 @@ import { ReviewSectionComponent } from './component/review-section/review-sectio
     ReturnOrdersPageComponent,
     CardPagesComponent,
     HomePageComponent,
-    FooterComponent,
     ProductComponent,
     ProductDetailComponent,
     OffSectionComponent,
@@ -35,7 +34,8 @@ import { ReviewSectionComponent } from './component/review-section/review-sectio
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FooterComponent   // import me likho, declarations me nahi
   ],
   providers: [],
   bootstrap: [AppComponent]
