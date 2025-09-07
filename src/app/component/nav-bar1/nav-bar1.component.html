@@ -22,6 +22,9 @@
   <div class="menu">
     <a routerLink="/login">Hello, sign in<br><strong>Account & Lists</strong></a>
     <a routerLink="/returns"><span>Returns</span><br><strong>& Orders</strong></a>
-    <a routerLink="/cart" class="cart">🛒 Cart <span class="count">0</span></a>
+  <a routerLink="/cart" class="cart">
+  🛒 Cart 
+  <span class="count" *ngIf="cartCount > 0">{{ cartCount }}</span>
+</a>
   </div>
 </header>

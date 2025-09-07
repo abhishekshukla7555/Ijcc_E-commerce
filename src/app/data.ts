@@ -21,7 +21,7 @@ export const SLIDES = [
     description: 'OnePlus 12R 5G',
     price: 'From ₹34,999'
   },
- 
+
 ];
 
 
@@ -97,56 +97,23 @@ export const PRODUCTS: Product[] = [
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// src/app/data.ts
 export const PRODUCT_CARDS = [
-  
-   {
+
+  {
     id: 1,
     brand: "HIGH STAR",
-    title: "Women’s Cotton Oversized Fit Solid Spread Collar Shirt",
-    imgFront: "assets/images/kimchibowl.png",
+    title: "Women’s Shirt",
+    description: "Trendy oversized cotton shirt perfect for casual outings.Trendy oversized cotton shirt perfect for casual outings.Trendy oversized cotton shirt perfect for casual outings.Trendy oversized cotton shirt perfect for casual outings.Trendy oversized cotton shirt perfect for casual outings.Trendy oversized cotton shirt perfect for casual outings.",
+    imgFront: "https://uneako.com/wp-content/uploads/2024/04/1-11.webp",
     imgBack: "assets/images/Kimchi_jar_2.png",
     images: [
+      "assets/images/kimchibowl.png",
       "assets/images/kimchibowl.png",
       "assets/images/Kimchi_jar_2.png",
       "assets/images/kimchibowl.png"
     ],
     price: {
-      current: 700,
-      old: 1599,
+      old: 2000,
       discount: "-56%"
     },
     rating: 4,
@@ -158,7 +125,6 @@ export const PRODUCT_CARDS = [
     ],
     sizes: ["M", "L", "XL"],
     delivery: {
-      date: "Tuesday, Sep 10",
       location: "Lucknow, India"
     },
     details: {
@@ -170,79 +136,147 @@ export const PRODUCT_CARDS = [
   },
   {
     id: 2,
-    title: 'Charcoal Face Pack',
-    price: '₹199.00',
-    imgFront: 'assets/images/Kimchi_Jar_1.png',
-    imgBack: 'assets/images/Kimchi_jar_3.png'
+    brand: "HIGH STAR",
+    title: "men’s Shirt",
+    description: "Trendy oversized cotton shirt perfect for casual outings.Trendy oversized cotton shirt perfect for casual outings.Trendy oversized cotton shirt perfect for casual outings.Trendy oversized cotton shirt perfect for casual outings.Trendy oversized cotton shirt perfect for casual outings.Trendy oversized cotton shirt perfect for casual outings.",
+    imgFront: "https://uneako.com/wp-content/uploads/2024/04/1-11.webp",
+    imgBack: "assets/images/Kimchi_jar_2.png",
+    images: [
+      "assets/images/kimchibowl.png",
+      "assets/images/kimchibowl.png",
+      "assets/images/Kimchi_jar_2.png",
+      "assets/images/kimchibowl.png"
+    ],
+    price: {
+      old: 100,
+      discount: "-56%"
+    },
+    rating: 5,
+    reviews: 600,
+    colors: [
+      { name: "White", image: "assets/images/logo.jpeg" },
+      { name: "Blue", image: "assets/images/logo.jpeg" },
+      { name: "Red", image: "assets/images/logo.jpeg" }
+    ],
+    sizes: ["M", "L", "XL"],
+    delivery: {
+      location: "Lucknow, India"
+    },
+    details: {
+      material: "Cotton",
+      sleeve: "Long Sleeve",
+      fit: "Oversized",
+      collar: "Spread Collar"
+    }
   },
   {
     id: 3,
     title: 'Fewture Cotton Bag',
-    price: '₹150.00',
-      imgFront: 'assets/images/Kimchi_Jar_1.png',
+    price: {
+      current: 700,
+      old: 1599,
+      discount: "-56%"
+    },
+    imgFront: 'assets/images/Kimchi_Jar_1.png',
     imgBack: 'assets/images/kimchibowl.png'
   },
   {
     id: 4,
     title: 'Stylus File Folder',
-    price: '₹120.00',
-     imgFront: 'assets/images/Kimchi_Jar_1.png',
+    price: {
+      current: 700,
+      old: 1599,
+      discount: "-56%"
+    },
+    imgFront: 'assets/images/Kimchi_Jar_1.png',
     imgBack: 'assets/images/kimchibowl.png'
   },
   {
     id: 5,
     title: 'Eco Large Jute Custom Bag',
-    price: '₹250.00',
+    price: {
+      current: 700,
+      old: 1599,
+      discount: "-56%"
+    },
     imgFront: 'assets/images/Kimchi_Jar_1.png',
     imgBack: 'assets/images/kimchibowl.png'
   },
   {
     id: 6,
     title: 'Charcoal Face Pack',
-    price: '₹199.00',
+    price: {
+      current: 700,
+      old: 1599,
+      discount: "-56%"
+    },
     imgFront: 'assets/images/Kimchi_Jar_1.png',
     imgBack: 'assets/images/kimchibowl.png'
   },
   {
     id: 7,
     title: 'Fewture Cotton Bag',
-    price: '₹150.00',
-      imgFront: 'assets/images/Kimchi_Jar_1.png',
+    price: {
+      current: 700,
+      old: 1599,
+      discount: "-56%"
+    },
+    imgFront: 'assets/images/Kimchi_Jar_1.png',
     imgBack: 'assets/images/kimchibowl.png'
   },
   {
     id: 8,
     title: 'Stylus File Folder',
-    price: '₹120.00',
-     imgFront: 'assets/images/Kimchi_Jar_1.png',
+    price: {
+      current: 700,
+      old: 1599,
+      discount: "-56%"
+    },
+    imgFront: 'assets/images/Kimchi_Jar_1.png',
     imgBack: 'assets/images/kimchibowl.png'
   },
   {
     id: 9,
     title: 'Eco Large Jute Custom Bag',
-    price: '₹250.00',
+    price: {
+      current: 700,
+      old: 1599,
+      discount: "-56%"
+    },
     imgFront: 'assets/images/Kimchi_Jar_1.png',
     imgBack: 'assets/images/kimchibowl.png'
   },
   {
     id: 10,
     title: 'Charcoal Face Pack',
-    price: '₹199.00',
+    price: {
+      current: 700,
+      old: 1599,
+      discount: "-56%"
+    },
     imgFront: "assets/images/Kimchi_Jar_1.png",
     imgBack: 'assets/images/kimchibowl.png'
   },
   {
     id: 11,
     title: 'Fewture Cotton Bag',
-    price: '₹150.00',
-      imgFront: 'assets/images/Kimchi_Jar_1.png',
+    price: {
+      current: 700,
+      old: 1599,
+      discount: "-56%"
+    },
+    imgFront: 'assets/images/Kimchi_Jar_1.png',
     imgBack: 'assets/images/kimchibowl.png'
   },
   {
     id: 12,
     title: 'Stylus File Folder',
-    price: '₹120.00',
-     imgFront: 'assets/images/Kimchi_Jar_1.png',
+    price: {
+      current: 700,
+      old: 1599,
+      discount: "-56%"
+    },
+    imgFront: 'assets/images/Kimchi_Jar_1.png',
     imgBack: 'assets/images/kimchibowl.png'
   }
 ];

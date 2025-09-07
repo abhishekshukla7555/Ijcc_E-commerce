@@ -1,14 +1,29 @@
-<div class="login-container">
+
+
+
+<div class="signup-container">
   <!-- Logo at center top -->
   <div class="logo">
     <img src="assets/images/logo.jpeg" alt="E-Commerce Logo" />
   </div>
 
-  <!-- Login Card -->
-  <div class="login-card">
-    <h2>Login</h2>
+  <!-- Signup Card -->
+  <div class="signup-card">
+    <h2>Sign Up</h2>
 
-    <form (ngSubmit)="onLogin()" #loginForm="ngForm">
+    <form (ngSubmit)="onSignUp()" #signupForm="ngForm">
+      <!-- Name -->
+      <div class="form-group">
+        <label for="name">Full Name</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          [(ngModel)]="name"
+          required
+        />
+      </div>
+
       <!-- Email -->
       <div class="form-group">
         <label for="email">Email Address</label>
@@ -33,17 +48,12 @@
         />
       </div>
 
-      <button type="submit" [disabled]="!loginForm.valid">Login</button>
+      <button type="submit" [disabled]="!signupForm.valid">Sign Up</button>
     </form>
 
-    <p class="signup-text">
-      Don’t have an account?
-      <a href="/signup">Sign Up</a>
+    <p class="login-text">
+      Already have an account?
+      <a routerLink="/login">Login</a>
     </p>
   </div>
 </div>
-
-
-
-
-

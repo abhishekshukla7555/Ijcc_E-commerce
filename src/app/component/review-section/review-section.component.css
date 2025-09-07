@@ -1,5 +1,5 @@
 .review-section {
-  max-width: 900px;
+  max-width: 650px;
   margin: 40px auto;
   padding: 20px;
   text-align: center;
@@ -33,6 +33,7 @@
   padding: 12px;
   font-size: 1rem;
   font-weight: bold;
+  margin-left: 14px;
   border: none;
   background: #bc002d;
   color: white;

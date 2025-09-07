@@ -1,2 +1,48 @@
-<p>card-pages works!</p>
-<h1>hello card pages are working</h1>
+<div class="cart-container">
+  <div class="cart-items">
+    <h2>Shopping Cart</h2>
+
+    <div class="cart-item" *ngFor="let item of cartItems; let i = index">
+      <div class="item-image">
+        <img [src]="item.image" [alt]="item.title" />
+      </div>
+
+      <div class="item-details">
+        <h3>{{ item.title }}</h3>
+
+        <!-- Show price properly -->
+       <p class="price">
+  ₹{{ getDiscountedPrice(item.oldPrice, item.discountPercent) }}
+  <span class="original">₹{{ item.oldPrice }}</span>
+  <span class="discount">({{ item.discountPercent }}% OFF)</span>
+  <span class="extra" *ngIf="item.extraDiscount">({{ item.extraDiscount }})</span>
+</p>
+
+
+        <!-- Quantity controls -->
+        <div class="quantity-controls">
+          <button (click)="decreaseQty(i)">-</button>
+          <span>{{ item.quantity }}</span>
+          <button (click)="increaseQty(i)">+</button>
+        </div>
+
+        <div class="actions">
+          <button (click)="removeItem(i)">Delete</button>
+          <button (click)="saveForLater(i)">Save for later</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Summary -->
+  <div class="cart-summary">
+    <h3>Subtotal ({{ totalItems }} items): ₹{{ totalPrice }}</h3>
+    <p class="savings">You saved ₹{{ totalSavings }} in discounts!</p>
+    <button class="checkout-btn">Proceed to Buy</button>
+  </div>
+</div>
+
+
+
+
+<app-footer></app-footer>
