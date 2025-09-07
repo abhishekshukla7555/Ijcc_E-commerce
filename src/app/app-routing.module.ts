@@ -10,10 +10,12 @@ import { CardPagesComponent } from './component/card-pages/card-pages.component'
 // New product components
 import { ProductComponent } from './component/product/product.component';
 import { ProductDetailComponent } from './component/product-detail/product-detail.component';
+import { SignInComponent } from './component/sign-in/sign-in.component';
 
 const routes: Routes = [
   { path: '', component: HomePageComponent },       // Default Home
   { path: 'login', component: LoginPageComponent },
+  { path: 'signup', component: SignInComponent },
   { path: 'returns', component: ReturnOrdersPageComponent },
   { path: 'cart', component: CardPagesComponent },
 

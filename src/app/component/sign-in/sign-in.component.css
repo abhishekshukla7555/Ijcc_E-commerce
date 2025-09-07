@@ -1,5 +1,10 @@
+
+
+
+
+
 /* Container */
-.login-container {
+.signup-container {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -16,10 +21,10 @@
 }
 
 /* Card */
-.login-card {
+.signup-card {
   width: 100%;
   max-width: 360px;
-  background: #e0c7c7;
+  background: #fff;
   border-radius: 10px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   padding: 25px;
@@ -27,7 +32,7 @@
 }
 
 /* Heading */
-.login-card h2 {
+.signup-card h2 {
   margin-bottom: 20px;
   color: #333;
 }
@@ -58,7 +63,7 @@ button {
   width: 100%;
   padding: 12px;
   border: none;
-  background: #e53935;
+  background: #2196f3;
   color: white;
   font-size: 16px;
   border-radius: 6px;
@@ -67,7 +72,7 @@ button {
 }
 
 button:hover:not(:disabled) {
-  background: #c62828;
+  background: #1976d2;
 }
 
 button:disabled {
@@ -75,22 +80,22 @@ button:disabled {
   cursor: not-allowed;
 }
 
-/* Signup link */
-.signup-text {
+/* Login link */
+.login-text {
   margin-top: 15px;
   font-size: 13px;
   color: #555;
 }
 
-.signup-text a {
-  color: #e53935;
+.login-text a {
+  color: #2196f3;
   text-decoration: none;
   font-weight: bold;
 }
 
 /* Responsive */
 @media (max-width: 480px) {
-  .login-card {
+  .signup-card {
     padding: 20px;
   }
 
@@ -104,5 +109,3 @@ button:disabled {
     padding: 10px;
   }
 }
-
-
