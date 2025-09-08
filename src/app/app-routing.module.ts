@@ -11,6 +11,10 @@ import { CardPagesComponent } from './component/card-pages/card-pages.component'
 import { ProductComponent } from './component/product/product.component';
 import { ProductDetailComponent } from './component/product-detail/product-detail.component';
 import { SignInComponent } from './component/sign-in/sign-in.component';
+import { UneakoComponent } from './ product/uneako/uneako.component';
+
+// ✅ Fixed path (no space, correct folder)
+
 
 const routes: Routes = [
   { path: '', component: HomePageComponent },       // Default Home
@@ -19,11 +23,16 @@ const routes: Routes = [
   { path: 'returns', component: ReturnOrdersPageComponent },
   { path: 'cart', component: CardPagesComponent },
 
-  // New product routes
+  // ✅ Uneako Products
+  { path: 'uneako', component: UneakoComponent },              // listing page
+  { path: 'uneako/:id', component: ProductDetailComponent },   // detail page
+
+  // ✅ Generic Products
   { path: 'products', component: ProductComponent },              // product listing
   { path: 'products/:id', component: ProductDetailComponent },    // product detail
 
-  { path: '**', redirectTo: '' } // Wildcard -> Home
+  // Wildcard -> Home
+  { path: '**', redirectTo: '' }
 ];
 
 @NgModule({

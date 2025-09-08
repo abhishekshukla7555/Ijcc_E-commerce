@@ -88,5 +88,10 @@
 <h1> View some similar products</h1>
 
 
-<app-product [excludeId]="product.id"></app-product>
+  <!-- Agar Uneako product hai -->
+  <app-prodct-uneako *ngIf="isUneako" [excludeId]="product.id"></app-prodct-uneako>
+
+  <!-- Agar normal product hai -->
+  <app-product *ngIf="!isUneako" [excludeId]="product.id"></app-product>
+
 <app-footer></app-footer>
