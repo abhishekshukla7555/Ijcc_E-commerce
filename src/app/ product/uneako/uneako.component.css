@@ -1,0 +1,56 @@
+/* 🌍 Section Styling */
+.elementor-section {
+  padding: 50px 20px;
+  background: none /* light background */
+}
+
+/* 🌟 Grid Layout */
+.e-con-inner {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+  justify-items: center;
+}
+
+/* 🖼️ Image Container */
+.elementor-widget-image a {
+  display: block;
+  border-radius: 18px;
+  overflow: hidden;
+  position: relative;
+  /* box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12); */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* 🖼️ Image Styling */
+.elementor-widget-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+  border-radius: 18px;
+}
+
+/* ✨ Hover Effects */
+.elementor-widget-image a:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.18);
+}
+
+.elementor-widget-image a:hover img {
+  transform: scale(1.05);
+  filter: brightness(1.05);
+}
+
+/* 📱 Responsive */
+@media (max-width: 768px) {
+  .e-con-inner {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .e-con-inner {
+    grid-template-columns: 1fr;
+  }
+}

@@ -16,6 +16,11 @@ import { ProductDetailComponent } from './component/product-detail/product-detai
 import { OffSectionComponent } from './off-section/off-section.component';
 import { ReviewSectionComponent } from './component/review-section/review-section.component';
 import { SignInComponent } from './component/sign-in/sign-in.component';
+import { UneakoComponent } from './ product/uneako/uneako.component';
+
+import { ProdctUneakoComponent } from './ product/prodct-uneako/prodct-uneako.component';
+import { CommonModule } from '@angular/common';
+
 
 @NgModule({
   declarations: [
@@ -31,12 +36,17 @@ import { SignInComponent } from './component/sign-in/sign-in.component';
     ProductDetailComponent,
     OffSectionComponent,
     ReviewSectionComponent,
-    SignInComponent
+    SignInComponent,
+    UneakoComponent,
+
+    ProdctUneakoComponent,
+  
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+        CommonModule, 
     ReactiveFormsModule
   ],
   providers: [],
