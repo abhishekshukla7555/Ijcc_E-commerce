@@ -1,22 +1,134 @@
-.product-detail {
-  max-width: 600px;
-  margin: 20px auto;
-  padding: 20px;
-  border-radius: 12px;
-  background: #fff;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  text-align: center;
+.container {
+  padding: 50px;
 }
 
-.detail-images {
+.product-page {
   display: flex;
-  justify-content: center;
-  gap: 15px;
-  margin-bottom: 15px;
+  gap: 20px;
+  padding: 20px;
+  font-family: Arial, sans-serif;
 }
 
-.detail-images img {
-  width: 45%;
-  border-radius: 12px;
-  object-fit: contain;
+.product-gallery {
+  flex: 1;
+}
+.main-image img {
+  width: 100%;
+  max-width: 400px;
+  max-height: 500px;
+  border-radius: 10px;
+}
+.thumbnail-list {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+.thumbnail-list img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  cursor: pointer;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+}
+.thumbnail-list img.active {
+  border: 2px solid #000;
+}
+
+.product-details {
+  flex: 1.2;
+}
+.product-details h1 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+.rating {
+  color: #f39c12;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+.price {
+  font-size: 22px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+.price .old {
+  text-decoration: line-through;
+  font-size: 16px;
+  color: gray;
+  margin-left: 10px;
+}
+.price .discount {
+  color: #e74c3c;
+  margin-left: 10px;
+  font-size: 16px;
+}
+
+.color-options .colors,
+.size-options {
+  display: flex;
+  gap: 10px;
+  margin: 10px 0;
+}
+.color-options img {
+  width: 40px;
+  height: 40px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.size-options button {
+  padding: 6px 14px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  cursor: pointer;
+  background: white;
+}
+.size-options button:hover {
+  border-color: #000;
+}
+
+.actions {
+  margin: 15px 0;
+  display: flex;
+  gap: 10px;
+}
+.btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  border: none;
+}
+.add-to-cart {
+  background: #f0c14b;
+}
+.buy-now {
+  background: #ff9900;
+  color: #fff;
+}
+
+/* Delivery Info */
+.delivery {
+  margin: 15px 0;
+  padding: 12px;
+  border-radius: 6px;
+  font-size: 14px;
+}
+.delivery strong {
+  color: #2a7a2a;
+}
+.delivery-location span {
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .product-page {
+    flex-direction: column;
+  }
+  .main-image img {
+    max-width: 100%;
+  }
+  .thumbnail-list {
+    justify-content: center;
+  }
 }

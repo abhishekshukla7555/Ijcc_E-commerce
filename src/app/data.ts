@@ -8,7 +8,7 @@ export const SLIDES = [
     price: 'From ₹19,999'
   },
   {
-    image: 'assets/images/home2.jpeg',
+    image: 'assets/images/Kimchi_image_for_heading.png',
     title: 'APPLE',
     subtitle: 'Latest iPhone 15 Series',
     description: 'Super Retina Display',
@@ -50,7 +50,7 @@ export const PRODUCTS: Product[] = [
     name: "Comfy Casual Shoes",
     price: 899,
     oldPrice: 2799,
-    image: "assets/images/KimchiJar.png ",
+    image: "assets/images/Kimchi_Jar_1.png",
     brand: "Nike"
   },
   {
@@ -58,7 +58,7 @@ export const PRODUCTS: Product[] = [
     name: "Deodorants",
     price: 199,
     oldPrice: 549,
-    image: "assets/images/Kimchijar3.png",
+    image: "assets/images/Kimchi_Jar_1.png",
     brand: "Fogg"
   },
   {
@@ -66,7 +66,7 @@ export const PRODUCTS: Product[] = [
     name: "Breezy Flip Flops",
     price: 499,
     oldPrice: 1399,
-    image: "assets/images/Kimchijar2.png",
+    image: "assets/images/Kimchi_Jar_1.png",
     brand: "Adidas"
   },
   {
@@ -74,7 +74,7 @@ export const PRODUCTS: Product[] = [
     name: "Sharp Formal Shoes",
     price: 899,
     oldPrice: 2799,
-    image: "assets/images/kimchibowl.png",
+    image: "assets/images/Kimchi_Jar_1.png",
     brand: "Bata"
   },
   {
@@ -82,7 +82,7 @@ export const PRODUCTS: Product[] = [
     name: "Trendy Jeans",
     price: 649,
     oldPrice: 1799,
-    image: "assets/images/home1.jpeg",
+    image: "assets/images/Kimchi_Jar_1.png",
     brand: "Levis"
   },
   {
@@ -90,7 +90,7 @@ export const PRODUCTS: Product[] = [
     name: "Enticing Perfumes",
     price: 449,
     oldPrice: 1249,
-    image: "assets/images/Kimchijar2.png",
+    image: "assets/images/Kimchi_Jar_1.png",
     brand: "Wild Stone"
   }
 ];
@@ -132,32 +132,117 @@ export const PRODUCTS: Product[] = [
 
 // src/app/data.ts
 export const PRODUCT_CARDS = [
-  {
+  
+   {
     id: 1,
-    title: 'Eco Large Jute Custom Bag',
-    price: '₹250.00',
-    imgFront: 'assets/images/Kimchijar3.png',
-    imgBack: 'assets/images/kimchibowl.png'
+    brand: "HIGH STAR",
+    title: "Women’s Cotton Oversized Fit Solid Spread Collar Shirt",
+    imgFront: "assets/images/kimchibowl.png",
+    imgBack: "assets/images/Kimchi_jar_2.png",
+    images: [
+      "assets/images/kimchibowl.png",
+      "assets/images/Kimchi_jar_2.png",
+      "assets/images/kimchibowl.png"
+    ],
+    price: {
+      current: 700,
+      old: 1599,
+      discount: "-56%"
+    },
+    rating: 4,
+    reviews: 600,
+    colors: [
+      { name: "White", image: "assets/images/logo.jpeg" },
+      { name: "Blue", image: "assets/images/logo.jpeg" },
+      { name: "Red", image: "assets/images/logo.jpeg" }
+    ],
+    sizes: ["M", "L", "XL"],
+    delivery: {
+      date: "Tuesday, Sep 10",
+      location: "Lucknow, India"
+    },
+    details: {
+      material: "Cotton",
+      sleeve: "Long Sleeve",
+      fit: "Oversized",
+      collar: "Spread Collar"
+    }
   },
   {
     id: 2,
     title: 'Charcoal Face Pack',
     price: '₹199.00',
-    imgFront: 'assets/images/Kimchijar3.png',
-    imgBack: 'assets/images/kimchibowl.png'
+    imgFront: 'assets/images/Kimchi_Jar_1.png',
+    imgBack: 'assets/images/Kimchi_jar_3.png'
   },
   {
     id: 3,
     title: 'Fewture Cotton Bag',
     price: '₹150.00',
-      imgFront: 'assets/images/Kimchijar3.png',
+      imgFront: 'assets/images/Kimchi_Jar_1.png',
     imgBack: 'assets/images/kimchibowl.png'
   },
   {
     id: 4,
     title: 'Stylus File Folder',
     price: '₹120.00',
-     imgFront: 'assets/images/Kimchijar3.png',
+     imgFront: 'assets/images/Kimchi_Jar_1.png',
+    imgBack: 'assets/images/kimchibowl.png'
+  },
+  {
+    id: 5,
+    title: 'Eco Large Jute Custom Bag',
+    price: '₹250.00',
+    imgFront: 'assets/images/Kimchi_Jar_1.png',
+    imgBack: 'assets/images/kimchibowl.png'
+  },
+  {
+    id: 6,
+    title: 'Charcoal Face Pack',
+    price: '₹199.00',
+    imgFront: 'assets/images/Kimchi_Jar_1.png',
+    imgBack: 'assets/images/kimchibowl.png'
+  },
+  {
+    id: 7,
+    title: 'Fewture Cotton Bag',
+    price: '₹150.00',
+      imgFront: 'assets/images/Kimchi_Jar_1.png',
+    imgBack: 'assets/images/kimchibowl.png'
+  },
+  {
+    id: 8,
+    title: 'Stylus File Folder',
+    price: '₹120.00',
+     imgFront: 'assets/images/Kimchi_Jar_1.png',
+    imgBack: 'assets/images/kimchibowl.png'
+  },
+  {
+    id: 9,
+    title: 'Eco Large Jute Custom Bag',
+    price: '₹250.00',
+    imgFront: 'assets/images/Kimchi_Jar_1.png',
+    imgBack: 'assets/images/kimchibowl.png'
+  },
+  {
+    id: 10,
+    title: 'Charcoal Face Pack',
+    price: '₹199.00',
+    imgFront: "assets/images/Kimchi_Jar_1.png",
+    imgBack: 'assets/images/kimchibowl.png'
+  },
+  {
+    id: 11,
+    title: 'Fewture Cotton Bag',
+    price: '₹150.00',
+      imgFront: 'assets/images/Kimchi_Jar_1.png',
+    imgBack: 'assets/images/kimchibowl.png'
+  },
+  {
+    id: 12,
+    title: 'Stylus File Folder',
+    price: '₹120.00',
+     imgFront: 'assets/images/Kimchi_Jar_1.png',
     imgBack: 'assets/images/kimchibowl.png'
   }
 ];

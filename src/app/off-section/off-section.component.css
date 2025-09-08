@@ -1,0 +1,73 @@
+
+
+
+/* Promo Section Layout */
+.promo-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 16px;
+}
+
+/* Banner Style */
+.promo-banner {
+  /* background: linear-gradient(135deg, #ff6a3d, #ff3d7a); */
+  background-image: url("https://images.unsplash.com/photo-1512436991641-6745cdb1723f?utm_source=chatgpt.com");
+  color: #fff;
+  padding: 40px 24px;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.promo-banner,
+.promo-banner.alt {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.promo-banner.alt {
+  background-image: url("https://images.unsplash.com/photo-1536098561742-ca998e48cbcc?auto=format&fit=crop&w=1200&q=80");
+}
+
+.promo-banner h2 {
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  margin-bottom: 12px;
+}
+
+.promo-banner p {
+  font-size: clamp(1rem, 2vw, 1.1rem);
+  margin-bottom: 20px;
+}
+
+.promo-btn {
+  display: inline-block;
+  padding: 12px 24px;
+  background: #fff;
+  color: #111;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 999px;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.promo-btn:hover {
+  background: #f1f1f1;
+  transform: translateY(-2px);
+}
+
+/* Hover effect for card */
+.promo-banner:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 24px rgba(0,0,0,0.25);
+}
+
+/* Responsive: stack on mobile */
+@media (max-width: 768px) {
+  .promo-section {
+    grid-template-columns: 1fr;
+  }
+}

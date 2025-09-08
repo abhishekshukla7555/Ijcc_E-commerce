@@ -9,10 +9,12 @@ import { LoginPageComponent } from './component/login-page/login-page.component'
 import { ReturnOrdersPageComponent } from './component/return-orders-page/return-orders-page.component';
 import { CardPagesComponent } from './component/card-pages/card-pages.component';
 import { HomePageComponent } from './component/home-page/home-page.component';
-import { FooterComponent } from './component/footer/footer.component';
+import { FooterComponent } from './component/footer/footer.component'; // import karo
 import { ProductComponent } from './component/product/product.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ProductDetailComponent } from './component/product-detail/product-detail.component';
+import { OffSectionComponent } from './off-section/off-section.component';
+import { ReviewSectionComponent } from './component/review-section/review-section.component';
 
 @NgModule({
   declarations: [
@@ -23,14 +25,17 @@ import { ProductDetailComponent } from './component/product-detail/product-detai
     ReturnOrdersPageComponent,
     CardPagesComponent,
     HomePageComponent,
-    FooterComponent,
     ProductComponent,
-    ProductDetailComponent
+    ProductDetailComponent,
+    OffSectionComponent,
+    ReviewSectionComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    FormsModule,
+    ReactiveFormsModule,
+    FooterComponent   // import me likho, declarations me nahi
   ],
   providers: [],
   bootstrap: [AppComponent]
