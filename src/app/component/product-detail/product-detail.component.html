@@ -33,8 +33,8 @@
 
     <p class="description">{{ product.description }}</p>
 
-    <!-- Color Options -->
-    <div class="options">
+    <!-- Colors -->
+    <div class="options" *ngIf="product.colors?.length">
       <label>Colors:</label>
       <div class="colors">
         <img *ngFor="let c of product.colors" 
@@ -48,9 +48,32 @@
     <!-- Sizes -->
     <div class="options">
       <label for="size">Size:</label>
-      <select id="size" [(ngModel)]="selectedSize">
+
+      <!-- Agar multiple sizes array hai -->
+      <select *ngIf="product.sizes?.length > 0; else singleOrNA"
+              id="size"
+              [(ngModel)]="selectedSize">
         <option *ngFor="let s of product.sizes" [value]="s">{{ s }}</option>
       </select>
+
+      <!-- Agar sirf ek size string hai -->
+      <ng-template #singleOrNA>
+        <span *ngIf="product.size; else noSize">
+          {{ product.size }}
+        </span>
+        <ng-template #noSize>
+          <span>Not available</span>
+        </ng-template>
+      </ng-template>
+    </div>
+
+    <!-- Weight -->
+    <div class="options">
+      <label>Weight:</label>
+      <span *ngIf="product.weight; else noWeight">{{ product.weight }} g</span>
+      <ng-template #noWeight>
+        <span>Not available</span>
+      </ng-template>
     </div>
 
     <!-- Delivery -->
@@ -60,6 +83,7 @@
       <p class="delivery-location">
         Delivering to: <span>{{ product.delivery.location }}</span>
       </p>
+      <p><strong>SKU Code: {{ product.SKU_ECC }}</strong></p>
     </div>
 
     <!-- Buttons -->
@@ -71,27 +95,23 @@
     <!-- Product Details -->
     <div class="details">
       <h3>Product Details</h3>
-      <p>
-        Material: {{ product.details.material }}<br>
-        Sleeve: {{ product.details.sleeve }}<br>
-        Fit Type: {{ product.details.fit }}<br>
-        Collar: {{ product.details.collar }}
-      </p>
+      <ul>
+        <li><strong>Brand:</strong> {{ product.brand }}</li>
+        <li><strong>Size:</strong> {{ product.size || selectedSize || 'Not available' }}</li>
+        <li><strong>Weight:</strong> {{ product.weight || 'Not available' }}</li>
+        <li><strong>SKU:</strong> {{ product.SKU_ECC }}</li>
+        <li><strong>Delivery Location:</strong> {{ product.delivery.location }}</li>
+      </ul>
     </div>
   </div>
 </div>
 
+<h1>View some similar products</h1>
 
+<!-- Agar Uneako product hai -->
+<app-prodct-uneako *ngIf="isUneako" [excludeId]="product.id"></app-prodct-uneako>
 
-
-
-<h1> View some similar products</h1>
-
-
-  <!-- Agar Uneako product hai -->
-  <app-prodct-uneako *ngIf="isUneako" [excludeId]="product.id"></app-prodct-uneako>
-
-  <!-- Agar normal product hai -->
-  <app-product *ngIf="!isUneako" [excludeId]="product.id"></app-product>
+<!-- Agar normal product hai -->
+<app-product *ngIf="!isUneako" [excludeId]="product.id"></app-product>
 
 <app-footer></app-footer>

@@ -1,5 +1,17 @@
+<!-- Sorting Dropdown -->
+<div class="sort-container">
+  <select [(ngModel)]="selectedSort" (change)="applySort()">
+    <option value="default">Default sorting</option>
+    <option value="popularity">Sort by popularity</option>
+    <option value="latest">Sort by latest</option>
+    <option value="lowToHigh">Sort by price: low to high</option>
+    <option value="highToLow">Sort by price: high to low</option>
+  </select>
+</div>
+
+<!-- Product Grid -->
 <div class="product-grid">
-  <div class="product-card" *ngFor="let product of filteredProducts">
+  <div class="product-card" *ngFor="let product of displayedProducts">
     <!-- Image -->
     <div class="product-image" (click)="viewDetails(product.id)">
       <img [src]="product.imgFront" [alt]="product.title" class="img-front">
