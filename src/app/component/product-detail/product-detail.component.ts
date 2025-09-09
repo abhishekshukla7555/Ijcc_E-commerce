@@ -28,6 +28,9 @@ export class ProductDetailComponent {
     this.route.paramMap.subscribe(params => {
       const id = Number(params.get('id'));
 
+
+      
+
       // ✅ Route check karo
       const currentUrl = this.route.snapshot.routeConfig?.path;
       this.isUneako = currentUrl?.startsWith('uneako') ?? false;
