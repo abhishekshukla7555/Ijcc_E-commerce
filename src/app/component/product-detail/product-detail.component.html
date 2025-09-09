@@ -1,0 +1,97 @@
+<div class="product-page" *ngIf="product">
+  <!-- Left: Product Images -->
+  <div class="product-gallery">
+    <!-- Thumbnails -->
+    <div class="thumbnails">
+      <img *ngFor="let img of product.images" 
+           [src]="img" 
+           [alt]="product.title" 
+           (click)="changeImage(img)"
+           [class.active]="img === selectedImage">
+    </div>
+    <!-- Main Image -->
+    <div class="main-image">
+      <img [src]="selectedImage" [alt]="product.title">
+    </div>
+  </div>
+
+  <!-- Right: Product Info -->
+  <div class="product-info">
+    <h1 class="title">{{ product.title }}</h1>
+    <p class="brand">Brand: <span>{{ product.brand }}</span></p>
+
+    <div class="rating">
+      {{ '⭐'.repeat(product.rating) }}☆ 
+      <span>({{ product.reviews }} Reviews)</span>
+    </div>
+
+    <div class="price-box">
+      <span class="current">₹{{ discountedPrice }}</span>
+      <span class="original">₹{{ product.price.old }}</span>
+      <span class="discount">({{ product.price.discount }} OFF)</span>
+    </div>
+
+    <p class="description">{{ product.description }}</p>
+
+    <!-- Color Options -->
+    <div class="options">
+      <label>Colors:</label>
+      <div class="colors">
+        <img *ngFor="let c of product.colors" 
+             [src]="c.image" 
+             [alt]="c.name"
+             (click)="selectColor(c)"
+             [class.active]="selectedColor?.name === c.name">
+      </div>
+    </div>
+
+    <!-- Sizes -->
+    <div class="options">
+      <label for="size">Size:</label>
+      <select id="size" [(ngModel)]="selectedSize">
+        <option *ngFor="let s of product.sizes" [value]="s">{{ s }}</option>
+      </select>
+    </div>
+
+    <!-- Delivery -->
+    <div class="delivery">
+      <h3>Delivery</h3>
+      <p>Get it by <strong>{{ deliveryDate }}</strong></p>
+      <p class="delivery-location">
+        Delivering to: <span>{{ product.delivery.location }}</span>
+      </p>
+    </div>
+
+    <!-- Buttons -->
+    <div class="buttons">
+      <button class="btn buy">Buy Now</button>
+      <button class="btn cart" (click)="addToCart()">Add to Cart</button>
+    </div>
+
+    <!-- Product Details -->
+    <div class="details">
+      <h3>Product Details</h3>
+      <p>
+        Material: {{ product.details.material }}<br>
+        Sleeve: {{ product.details.sleeve }}<br>
+        Fit Type: {{ product.details.fit }}<br>
+        Collar: {{ product.details.collar }}
+      </p>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<h1> View some similar products</h1>
+
+
+  <!-- Agar Uneako product hai -->
+  <app-prodct-uneako *ngIf="isUneako" [excludeId]="product.id"></app-prodct-uneako>
+
+  <!-- Agar normal product hai -->
+  <app-product *ngIf="!isUneako" [excludeId]="product.id"></app-product>
+
+<app-footer></app-footer>

@@ -11,6 +11,16 @@ import { CardPagesComponent } from './component/card-pages/card-pages.component'
 import { HomePageComponent } from './component/home-page/home-page.component';
 import { FooterComponent } from './component/footer/footer.component';
 import { ProductComponent } from './component/product/product.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ProductDetailComponent } from './component/product-detail/product-detail.component';
+import { OffSectionComponent } from './off-section/off-section.component';
+import { ReviewSectionComponent } from './component/review-section/review-section.component';
+import { SignInComponent } from './component/sign-in/sign-in.component';
+import { UneakoComponent } from './ product/uneako/uneako.component';
+
+import { ProdctUneakoComponent } from './ product/prodct-uneako/prodct-uneako.component';
+import { CommonModule } from '@angular/common';
+
 
 @NgModule({
   declarations: [
@@ -22,11 +32,22 @@ import { ProductComponent } from './component/product/product.component';
     CardPagesComponent,
     HomePageComponent,
     FooterComponent,
-    ProductComponent
+    ProductComponent,
+    ProductDetailComponent,
+    OffSectionComponent,
+    ReviewSectionComponent,
+    SignInComponent,
+    UneakoComponent,
+
+    ProdctUneakoComponent,
+  
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+        CommonModule, 
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

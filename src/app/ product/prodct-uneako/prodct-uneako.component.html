@@ -1,0 +1,22 @@
+<div class="product-grid">
+  <div class="product-card" *ngFor="let product of filteredProducts">
+    <!-- Image -->
+    <div class="product-image" (click)="viewDetails(product.id)">
+      <img [src]="product.imgFront" [alt]="product.title" class="img-front">
+      <img [src]="product.imgBack" [alt]="product.title" class="img-back">
+    </div>
+
+    <!-- Product Info -->
+    <div class="product-info">
+      <h3>{{ product.title }}</h3>
+      <div class="price-container">
+        <span class="original">₹{{ product.price.old }}</span>
+        <span class="current">
+          ₹{{ getDiscountedPrice(product.price.old, product.price.discount) }}
+        </span>
+        <span class="discount">({{ product.price.discount }} OFF)</span>
+      </div>
+      <button class="add-btn" (click)="addToCart(product)">Add to basket</button>
+    </div>
+  </div>
+</div>

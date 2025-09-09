@@ -1,0 +1,59 @@
+
+
+
+<div class="signup-container">
+  <!-- Logo at center top -->
+  <div class="logo">
+    <img src="assets/images/logo.jpeg" alt="E-Commerce Logo" />
+  </div>
+
+  <!-- Signup Card -->
+  <div class="signup-card">
+    <h2>Sign Up</h2>
+
+    <form (ngSubmit)="onSignUp()" #signupForm="ngForm">
+      <!-- Name -->
+      <div class="form-group">
+        <label for="name">Full Name</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          [(ngModel)]="name"
+          required
+        />
+      </div>
+
+      <!-- Email -->
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          [(ngModel)]="email"
+          required
+        />
+      </div>
+
+      <!-- Password -->
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input
+          type="password"
+          id="password"
+          name="password"
+          [(ngModel)]="password"
+          required
+        />
+      </div>
+
+      <button type="submit" [disabled]="!signupForm.valid">Sign Up</button>
+    </form>
+
+    <p class="login-text">
+      Already have an account?
+      <a routerLink="/login">Login</a>
+    </p>
+  </div>
+</div>
