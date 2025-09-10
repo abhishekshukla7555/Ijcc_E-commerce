@@ -2,24 +2,31 @@
   export const SLIDES = [
     {
       image: 'assets/images/red_chilli.png',
-      title: 'SAMSUNG',
-      subtitle: 'No. 1 selling smartphone',
-      description: 'Galaxy A35 5G',
-      price: 'From ₹19,999'
+      title: 'Red kimchi using cabbage',
+      subtitle: 'Made with 100% domestic ingredients and deep-sea water',
+      // description: 'Galaxy A35 5G',
+      // price: 'From ₹19,999'
     },
     {
-      image: 'assets/images/Kimchi_image_for_heading.png',
-      title: 'APPLE',
-      subtitle: 'Latest iPhone 15 Series',
-      description: 'Super Retina Display',
-      price: 'From ₹69,999'
+      image: 'assets/images/Havior.png',
+      title: 'Hemp Care Paradigam',
+      subtitle: 'The Ultimate Skin Comfort with Hemp',
+      // description: 'Super Retina Display',
+      // price: 'From ₹69,999'
     },
     {
-      image: 'assets/images/home3.jpeg',
-      title: 'ONEPLUS',
-      subtitle: 'Flagship Killer',
-      description: 'OnePlus 12R 5G',
-      price: 'From ₹34,999'
+      image: 'assets/images/uneako_product.png',
+      title: 'Climate Positive Products',
+      subtitle: 'Make plant happy',
+      // description: 'OnePlus 12R 5G',
+      // price: 'From ₹34,999'
+    },
+     {
+      image: 'assets/images/Pack_of_Havoir.png',
+      // title: 'Climate Positive Products',
+      // subtitle: 'Make plant happy',
+      // description: 'OnePlus 12R 5G',
+      // price: 'From ₹34,999'
     },
 
   ];

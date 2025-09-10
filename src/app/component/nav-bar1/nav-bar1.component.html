@@ -1,9 +1,9 @@
 <header class="navbar">
   <!-- Left: Logo -->
   <div class="logo-location">
-    <a class="logo" href="#">
-      <img src="assets/images/logo.jpeg" alt="MyShop Logo">
-    </a>
+    <div class="logo_image">
+      <img src="assets/images/logo1.png" class="logo" href="#" height="80" width="80" alt="MyShop Logo" />
+    </div>
   </div>
 
   <!-- Middle: Search -->
@@ -22,9 +22,9 @@
   <div class="menu">
     <a routerLink="/login">Hello, sign in<br><strong>Account & Lists</strong></a>
     <a routerLink="/returns"><span>Returns</span><br><strong>& Orders</strong></a>
-  <a routerLink="/cart" class="cart">
-  🛒 Cart 
-  <span class="count" *ngIf="cartCount > 0">{{ cartCount }}</span>
-</a>
+    <a routerLink="/cart" class="cart">
+      🛒 Cart
+      <span class="count" *ngIf="cartCount > 0">{{ cartCount }}</span>
+    </a>
   </div>
 </header>
