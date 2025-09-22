@@ -12,6 +12,8 @@ import { ProductComponent } from './component/product/product.component';
 import { ProductDetailComponent } from './component/product-detail/product-detail.component';
 import { SignInComponent } from './component/sign-in/sign-in.component';
 import { UneakoComponent } from './ product/uneako/uneako.component';
+import { KoreanCreamComponent } from './ product/korean_cream/korean-cream/korean-cream.component';
+import { ProductCreamComponent } from './ product/korean_cream/product-cream/product-cream.component';
 
 // ✅ Fixed path (no space, correct folder)
 
@@ -26,10 +28,15 @@ const routes: Routes = [
   // ✅ Uneako Products
   { path: 'uneako', component: UneakoComponent },              // listing page
   { path: 'uneako/:id', component: ProductDetailComponent },   // detail page
+   // ✅ korean-cream Products
+  { path:'korean-cream',component:KoreanCreamComponent},
+  { path:'korean-cream/:id', component: ProductDetailComponent },
 
   // ✅ Generic Products
   { path: 'products', component: ProductComponent },              // product listing
   { path: 'products/:id', component: ProductDetailComponent },    // product detail
+
+  
 
   // Wildcard -> Home
   { path: '**', redirectTo: '' }
