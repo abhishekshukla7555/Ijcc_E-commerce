@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { PRODUCT_CARDS } from '../../data';
-import { UNEAKO_PRODUCT } from '../../uneako';   // ✅ import Uneako data
+import { UNEAKO_PRODUCT } from '../../uneako';
+import { KOREAN_CREAM_PRODUCT } from '../../korean-cream'; // ✅ import cream data
 import { ActivatedRoute } from '@angular/router';
 import { CartService } from '../../Services/card.service';
 
@@ -17,7 +18,9 @@ export class ProductDetailComponent {
   selectedSize: string = '';
   deliveryDate: string = '';
   discountedPrice: number = 0;
-  isUneako: boolean = false;  // ✅ track karne ke liye
+
+  isUneako: boolean = false;
+  isCream: boolean = false; // ✅ new flag
 
   constructor(
     private route: ActivatedRoute,
@@ -27,16 +30,16 @@ export class ProductDetailComponent {
   ngOnInit(): void {
     this.route.paramMap.subscribe(params => {
       const id = Number(params.get('id'));
-
-
-      
-
-      // ✅ Route check karo
       const currentUrl = this.route.snapshot.routeConfig?.path;
+
+      // ✅ route check
       this.isUneako = currentUrl?.startsWith('uneako') ?? false;
+      this.isCream = currentUrl?.startsWith('korean-cream') ?? false;
 
       if (this.isUneako) {
         this.product = UNEAKO_PRODUCT.find(p => p.id === id);
+      } else if (this.isCream) {
+        this.product = KOREAN_CREAM_PRODUCT.find(p => p.id === id);
       } else {
         this.product = PRODUCT_CARDS.find(p => p.id === id);
       }
@@ -57,7 +60,6 @@ export class ProductDetailComponent {
         today.setDate(today.getDate() + 7);
         this.deliveryDate = today.toDateString();
 
-        // ✅ Scroll to top on load
         window.scrollTo(0, 0);
       }
     });

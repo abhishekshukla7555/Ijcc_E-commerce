@@ -20,6 +20,8 @@ import { UneakoComponent } from './ product/uneako/uneako.component';
 
 import { ProdctUneakoComponent } from './ product/prodct-uneako/prodct-uneako.component';
 import { CommonModule } from '@angular/common';
+import { KoreanCreamComponent } from './ product/korean_cream/korean-cream/korean-cream.component';
+import { ProductCreamComponent } from './ product/korean_cream/product-cream/product-cream.component';
 
 
 @NgModule({
@@ -40,6 +42,8 @@ import { CommonModule } from '@angular/common';
     UneakoComponent,
 
     ProdctUneakoComponent,
+     KoreanCreamComponent,
+     ProductCreamComponent,
   
   ],
   imports: [
